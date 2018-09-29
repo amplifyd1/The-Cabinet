@@ -5,7 +5,7 @@ class DocsController < ApplicationController
   end
 
   def index
-    @docs = Document.all
+    @docs = Doc.all.order("created_at DESC")
   end
 
   def new
