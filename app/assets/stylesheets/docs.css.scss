@@ -9,6 +9,9 @@
 		border-radius: 2.9rem;
 		position: relative;
 		text-align: center;
+		a { 
+			color:white;
+		}
 		.title {
 			@include bold_font;
 			color: white;
