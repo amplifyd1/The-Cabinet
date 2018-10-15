@@ -1,5 +1,11 @@
-<h1><%= @doc.title %></h1>
-<p><%= @doc.content %></p>
-<p><%= link_to "All Docs", docs_path %></p>
-<p><%= link_to "Edit Doc", edit_doc_path(@doc) %></p>
-<p><%= link_to "Delete", doc_path(@doc), method: :delete, data: {Confirm: "Are you sure?"} %></p>
+<div class="wrapper_with_padding">
+    <div id='doc_show'>
+        <h1 class='title'><%= @doc.title %></h1>
+        <p><%= simple_format(@doc.content) %></p>
+        <div class="buttons">
+            <p><%= link_to "All Docs", docs_path, class: 'button' %></p>
+            <p><%= link_to "Edit Doc", edit_doc_path(@doc), class: 'button' %></p>
+            <p><%= link_to "Delete", doc_path(@doc), method: :delete, data: {Confirm: "Are you sure?"}, class: 'button' %></p>
+        </div>
+    </div>
+</div>
